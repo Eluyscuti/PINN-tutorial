@@ -1,0 +1,7 @@
+# Requirements inferred from PINNs/PINNs-massdamper/mass-damper-PINN-tutorial-beta.ipynb
+# Note: `keyfunctions` is a local module in the repo (not a PyPI package).
+torch
+torchvision
+numpy
+matplotlib
+scipy
