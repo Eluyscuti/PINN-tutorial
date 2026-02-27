@@ -108,17 +108,6 @@ The results were compared to some existing methods like MCMC, parameter cascadin
 2. For high-dimensional parameter spaces, grid sampling was computationally prohibitive.
 3. The method applies primarily to first order differential equations. Higher parameter equations require extra methods. 
 
-## Summary of relevant math in this paper:
-<br><br><br><br><br>
-<img src="IMG_7224.png" alt="" style="transform: rotate(90deg);" width=700>
-<br><br><br><br><br><br><br><br>
-<img src="IMG_7225.png" alt="" style="transform: rotate(90deg);" width=700>
-<br><br><br><br><br><br><br><br>
-
-## Relevant code sources for LAP method
-1. https://github.com/leekjstat/dem-LAPinfer/tree/master (end to end implementation of the LAP method as an R package)
-2. https://github.com/LaplacesDemonR/LaplacesDemon (provides a complete and self-contained Bayesian environment within R. For example, this package includes dozens of MCMC algorithms, Laplace Approximation, iterative quadrature, Variational Bayes, parallelization, big data, PMC, over 100 examples in the Examples vignette, dozens of additional probability distributions, numerous MCMC diagnostics, Bayes factors, posterior predictive checks, a variety of plots, elicitation, parameter and variable importance, Bayesian forms of test statistics)
-
 # Summary of Math: Laplace Approximated Posterior (LAP) for ODE Models
 
 ### 1. The Problem
@@ -250,3 +239,7 @@ $$\pi(\theta \mid y_n) \propto \frac{\pi(\theta)}{\left(\frac{u(\theta)}{2}+b\ri
 **For** each $\theta^{(i)}$, sample $\tau^{2(i)} \sim \text{Gamma}\!\left(\frac{np}{2}+a,\ \frac{u(\theta^{(i)})}{2}+b\right)$
 
 **Return** $\{\theta^{(i)}, \tau^{2(i)}\}$
+
+## Relevant code sources for LAP method
+1. https://github.com/leekjstat/dem-LAPinfer/tree/master (end to end implementation of the LAP method as an R package)
+2. https://github.com/LaplacesDemonR/LaplacesDemon (provides a complete and self-contained Bayesian environment within R. For example, this package includes dozens of MCMC algorithms, Laplace Approximation, iterative quadrature, Variational Bayes, parallelization, big data, PMC, over 100 examples in the Examples vignette, dozens of additional probability distributions, numerous MCMC diagnostics, Bayes factors, posterior predictive checks, a variety of plots, elicitation, parameter and variable importance, Bayesian forms of test statistics)
