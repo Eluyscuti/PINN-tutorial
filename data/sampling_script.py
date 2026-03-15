@@ -69,8 +69,8 @@ def parse_args():
     # Time span
     parser.add_argument('--t_end',   type=float, default=60.0,
                         help='End time [s] (default: 60.0)')
-    parser.add_argument('--n_eval',  type=int,   default=600,
-                        help='Number of time points for ground truth (default: 600)')
+    parser.add_argument('--fs',  type=int,   default=100,
+                        help='Sampling rate [Hz] (default: 100)')
 
     # Sparsity
     parser.add_argument('--sparsity', type=int, nargs='+', default=[50, 100, 150],
@@ -138,6 +138,7 @@ def main():
     Kp     = args.Kp
     x0     = args.x0
     t_span = (0, args.t_end)
+    n_eval  = int(args.t_end * args.fs)+1 #adding + 1 to include the endpoint
     t_eval = np.linspace(*t_span, args.n_eval)
 
     # derived parameters
