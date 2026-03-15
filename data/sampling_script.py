@@ -12,6 +12,9 @@ python sampling_script.py
 # custom physical parameters
 python sampling_script.py --m 2.0 --c 0.3 --k 0.2
 
+# custom sampling rates (e.g. 50 Hz instead of 100 Hz)
+python sampling_script.py --fs 50
+
 # custom sparsity levels
 python sampling_script.py --sparsity 50 100 200
 
@@ -139,7 +142,7 @@ def main():
     x0     = args.x0
     t_span = (0, args.t_end)
     n_eval  = int(args.t_end * args.fs)+1 #adding + 1 to include the endpoint
-    t_eval = np.linspace(*t_span, args.n_eval)
+    t_eval = np.linspace(*t_span,n_eval)
 
     # derived parameters
     delta_val  = c_true / (2 * m_true)
@@ -177,7 +180,7 @@ def main():
                         args=(m_true, c_true, k_true, u_funcs[i], w_1, Kp_array[i]))
         sol_inharm.append(sol)
 
-    print(f"Simulated {len(sol_inharm)} forcing models over t={t_span}, {args.n_eval} timepoints.")
+    print(f"Simulated {len(sol_inharm)} forcing models over t={t_span}, {n_eval} timepoints.")
 
     # ---------------------------
     # Ground truth dictionary
