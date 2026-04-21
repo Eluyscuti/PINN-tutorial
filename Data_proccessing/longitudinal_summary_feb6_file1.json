@@ -1,0 +1,61 @@
+{
+  "input_path": "/Users/abhi/Desktop/Projects/Sys_ID/PINN-tutorial/Data_proccessing/plot_data_foxglove_manual_feb6.csv",
+  "processed_path": "/Users/abhi/Desktop/Projects/Sys_ID/PINN-tutorial/Data_proccessing/manual_processed_feb6_file1.csv",
+  "windows_report_path": "/Users/abhi/Desktop/Projects/Sys_ID/PINN-tutorial/Data_proccessing/longitudinal_windows_report_feb6_file1.csv",
+  "segments_path": "/Users/abhi/Desktop/Projects/Sys_ID/PINN-tutorial/Data_proccessing/longitudinal_segments_feb6_file1.csv",
+  "sysid_ready_subset_path": "/Users/abhi/Desktop/Projects/Sys_ID/PINN-tutorial/Data_proccessing/sysid_ready_longitudinal_subset_feb6.csv",
+  "trajectory_plot_path": "/Users/abhi/Desktop/Projects/Sys_ID/PINN-tutorial/Data_proccessing/trajectory_longitudinal_windows_feb6_file1.png",
+  "diagnostic_plot_path": "/Users/abhi/Desktop/Projects/Sys_ID/PINN-tutorial/Data_proccessing/trajectory_window_diagnostics_feb6_file1.png",
+  "n_samples": 12230,
+  "n_windows": 67,
+  "n_good_windows": 8,
+  "n_segments": 5,
+  "segments": [
+    {
+      "seg_id": 1,
+      "t_start": 15.02006682,
+      "t_end": 20.02006682,
+      "duration_s": 5.0,
+      "n_windows": 1
+    },
+    {
+      "seg_id": 2,
+      "t_start": 25.02006682,
+      "t_end": 30.02006682,
+      "duration_s": 5.0,
+      "n_windows": 1
+    },
+    {
+      "seg_id": 3,
+      "t_start": 50.02006682,
+      "t_end": 55.02006682,
+      "duration_s": 5.0,
+      "n_windows": 1
+    },
+    {
+      "seg_id": 4,
+      "t_start": 112.52006682,
+      "t_end": 122.52006682,
+      "duration_s": 10.0,
+      "n_windows": 3
+    },
+    {
+      "seg_id": 5,
+      "t_start": 150.02006682,
+      "t_end": 157.52006682,
+      "duration_s": 7.5,
+      "n_windows": 2
+    }
+  ],
+  "thresholds": {
+    "MIN_MEAN_SPEED_3D_MPS": 1.0,
+    "MIN_FORWARD_SPEED_MPS": 2.0,
+    "MAX_LAT_RATIO": 0.3,
+    "MAX_HEADING_STD_DEG": 15.0,
+    "MIN_PROGRESS_M": 5.0,
+    "WIN_S": 5.0,
+    "STEP_S": 2.5,
+    "SAVGOL_WINDOW": 11,
+    "SAVGOL_POLY": 3
+  }
+}
